@@ -1,0 +1,317 @@
+<!doctype html>
+
+<html>
+	
+<head>
+	
+<!--The following displays language used in browser to interpret page -->
+<meta charset="UTF-8">
+
+<!--The following line of code displays the page title on a browser tab -->
+<title>Cal Poly Creatives | Home</title>
+
+<!--link tags are for linking to external files, in this case your CSS stylesheet-->
+<link href="style.css" rel="stylesheet" type="text/css">
+	
+<!--link tags are for linking to external files, in this case a special CSS stylesheet-->
+<link href="normalize.css" rel="stylesheet" type="text/css">
+
+<!--the following tag tells the browser to adjust the site according to screen size-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--The following code links to the jquery library -->
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+
+<!--The following code links to the javascript file that runs the slideshow -->	
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+    
+<!--The following code links to the javascript file that runs the parallax image -->    
+<script src="js/parallax.min.js"></script>
+	
+<!--The following code links to Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Raleway:900|Rubik" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+<!--The following javscript runs the jquery slideshow -->
+<script type="text/javascript">
+$('#slider').cycle({});
+</script>
+
+<!--The following javascript runs the nav bar which disappears on scroll-->
+<script type="text/javascript">
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+</script>
+    
+<!--Favicon - images are in a folder called 'fav'-->
+<link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
+<link rel="manifest" href="img/fav/site.webmanifest">
+<link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!--End Favicon-->
+    
+<!--back to top button-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}    
+</script>   
+</head>
+
+<body>
+
+<!--beginning of navigation section-->
+<header>
+<div class="nav-container">
+<div class="brand"><img src="img/logo.png" width=90 height= alt=""/></div>
+<nav>
+<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+  <ul class="nav-list">
+        <li>
+          <a href="#home">Cal Poly Creatives</a>
+        </li>
+	   <li>
+          <a href="#gal">Student Artists At Work</a>
+		  </li>
+	  	<li>
+          <a href="#tl">What is Your Favorite Art Piece?</a>
+        </li>
+        <li>
+          <a href="#vid">The Power of Art</a>
+			</li>
+      <li>
+          <a href="#num">Why is Art Education Important?</a>
+			</li>
+      </ul>
+</nav>
+</div>
+<!--closing navigation tag-->
+</header>
+<!--end of navigation section-->
+    
+<!--main image-->
+<div class="container">
+</div>
+<!--animated welcome-->
+<div class="wrapper">
+<!--animated welcome code here-->	
+</div>
+    
+<!--beginning of main content area-->
+<div class="row whiteBG">
+<h2 id="home">Cal Poly Creatives</h2>
+<article>
+<p class="tab">For centuries, art’s influence has been able to change the mindsets of others, and even change the course of society. And most of these powerful art pieces come from young artists who share their unique styles and bold viewpoints. <br><br>Meet just a few of the Cal Poly artists who use their own techniques and personal perspectives in their pieces to impact the different communities around them. </p>
+<p class="tab"><a href="#gal">Student Artists At Work</a></p>
+</article>
+</div>
+
+<!--beginning of slideshow section-->
+<div class="row blueBG"><!--beginning of row-->
+<h2 id="gal">Student Artists At Work</h2>
+<article><!--beginning of article-->
+<p class="tab">Each student's art journey is different, some were born into an artistic household and others randomly found a passion just a few years ago. Due to the variety of artists and their work, the opportunity to inspire is tremendous.</p>
+<!--beginning of slideshow-->
+<div id="slider"
+data-cycle-caption="#alt-caption"
+data-cycle-caption-template="{{alt}}"
+data-cycle-fx="scrollHorz"
+data-cycle-pause-on-hover="true"
+data-cycle-speed="200">
+<div class="cycle-prev"></div>
+<div class="cycle-next"></div>
+<img src="img/1.jpg" width="100%" height="100%" alt="Holly Chisholm, a second year art and design major poses proudly in her art-filled bedroom. Being a Brooklyn native, Chisholm has had some of the world’s best pieces at her fingertips from a very young age. Not only did these famous pieces inspire her, but so did her artistic parents. “Both of my parents are graphic designers, so I grew up in a very creative household,” Chisholm said."/>
+<img src="img/2.jpg" width="100%" height="100%" alt="Focusing his camera out onto the water, second year photography and video concentration major, Owen Beim decides which angle will get him the best shot. Starting at just 12 years old with a GoPro camera, Beim’s passion for photography and videography (especially when filming in the water) has been a sort of “getaway” for him. “For me, being in the water in general is such a nice getaway, but when the waves are really good and I know I am going to get good photos, it’s just the best feeling,” Beim said.  
+"/>
+<img src="img/3.jpg" width="100%" height="100%" alt="Adding some last artistic touches to a drawing, second year art and design major, Sofia Rowley always keeps her sketchbook on hand in case inspiration strikes. Rowley describes art as her “life’s passion,” and would not want to dismiss it during her day to day routine. By keeping a sketchbook on her at all times she is able to “be creative wherever,” and draw from real life experiences."/>
+<img src="img/4.jpg" width="100%" height="100%" alt="Using a Sony A7II camera, Beim snaps a photo of one of his favorite spots in San Luis Obispo, Pirate’s Cove. Being a freelance photographer, Beim takes a variety of photos, but is known for taking pictures of surfers and oceanic views. So, with Pirate’s Cove looking over Avila Beach, it is the perfect spot for one of Beim’s shoots."/>
+<img src="img/5.jpg" width="100%" height="100%" alt="Rowley sits side by side with a self portrait which she completed for one of her beginning art classes. Studying art at Cal Poly has allowed Rowley to explore new avenues of her creativity and surprise herself with new skills - like a realistic self portrait. “I started off painting originally, but I am more focused on graphic art right now, so it’s fun to do something like a self portrait because it brings me back to when I first started art,” Rowley said."/>
+<img src="img/6.jpg" width="100%" height="100%" alt="Isaiah Cruz, a second year communications major takes a break from shooting video clips with skater friend, Drew. Unlike many other artists his age in San Luis Obispo, Cruz is not studying his art form (videography), instead he likes to keep it separate from his studies."/>
+<img src="img/7.jpg" width="100%" height="100%" alt="With almost 10 years of experience shooting on the coast, Beim is now traveling around the world and exploring new oceans to take photos. “For this summer, hopefully traveling again because I went to Tahiti last summer and that was the most eye opening trip I have ever been on,” Beim said."/>
+<img src="img/8.jpg" width="100%" height="100%" alt="Analyzing her artwork, Rowley comments on the specific painting techniques used for each piece. Rowley’s artistic style varies from piece to piece, because presenting diversity in technique is one of the most important aspects in her work."/>
+<img src="img/9.jpg" width="100%" height="100%" alt="Cruz once started as an amateur skater but found that he enjoyed videoing and creating edits of his friends more. “I like to stick behind the camera,” Cruz said. Now, Cruz is editing and filming for several clients, some of which are even grammy nominated. “The last few years I have been focused on just learning and building on those skills, so I am now really starting to have fun with it,” Cruz said."/>
+<img src="img/10.jpg" width="100%" height="100%" alt="Rowley (left) and Chisholm (right), often reminisce on their art journeys and agree that choosing to study their passion at Cal Poly was the best decision they could make for their future careers."/>
+</div><!--end of slideshow-->
+<!--beginning of slideshow caption-->
+<div id="alt-caption" class="center">
+</div><!--end of slideshow caption-->
+<p class="tab"><a href="#tl">What is Your Favorite Art Piece?</a></p>
+</article><!--end of article-->
+</div><!--end of row-->
+<!--end of slideshow section-->
+	
+<!--beginning of audio section-->
+<div class="row whiteBG">
+<h2 id="tl">What is Your Favoirte Art Piece?</h2>
+<article>
+  <p class="tab">Click on images to hear some other Cal Poly Students' favorite art pieces <br>(Double-click to pause audio)</p>
+  <div class="table">
+	<div id="trip">
+<audio id="audio_1">
+    <source src="audio/1.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio_2">
+    <source src="audio/2.mp3" type="audio/mpeg" />
+</audio>        
+<audio id="audio_3">
+	<source src="audio/3.mp3" type="audio/mpeg" />
+</audio>
+        
+<img src="img/rollover/1.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/1.jpg'" onMouseOut="this.src='img/rollover/1.gif'" onClick="document.getElementById('audio_1').play(); return false;" onDblClick="document.getElementById('audio_1').pause(); return false;">
+ /&gt; 
+            
+<img src="img/rollover/2.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/2.jpg'" onMouseOut="this.src='img/rollover/2.gif'" onClick="document.getElementById('audio_2').play(); return false;" onDblClick="document.getElementById('audio_2').pause(); return false;">
+ /&gt;
+            
+<img src="img/rollover/3.gif" class="rollover" alt="description" onMouseOver="this.src='img/rollover/3.jpg'" onMouseOut="this.src='img/rollover/3.gif'" onClick="document.getElementById('audio_3').play(); return false;" onDblClick="document.getElementById('audio_3').pause(); return false;">
+/&gt;
+	</div>
+</div>
+<p class="tab"><a href="#vid">The Power of Art</a></p>		
+</article>
+</div>
+<!--end of audio section-->
+    
+<!--beginning of parallax image-->
+<div class="parallax" data-parallax="scroll" data-bleed="10" data-speed="0.2" iosFix="true" data-image-src="img/parallax.jpg">
+</div>
+<!--end of parallax image-->
+
+<!--beginning of video section-->
+<div class="row orangeBG">
+<h2 id="vid">The Power of Art</h2>
+<article>
+<p class="tab">Roommates Sofia Rowley and Holly Chisholm are second-year art and design majors with a profound love for art. Both grew up in artistic households and have found that art is truly the only way for them to express themselves.</p>	
+<video width="100%" height="100%" poster="img/poster.jpg" controls>
+<source src="img/video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p class="tab"><a href="#num">Why is Art Education Important?</a></p>
+</article>
+</div>
+<!--end of video section-->
+
+<!--beginning of infographic section-->
+<div class="row whiteBG">
+<h2 id="num">Why is Art Education Important?</h2>
+<article>
+<p class="tab"></p>
+<!--infographic embed code here-->
+</article>
+</div>
+<!--end of infographic section-->
+	
+<!--beginning of footer-->
+<footer>Cal Poly Creatives | San Luis Obispo, CA | <a href="mailto: elightfoot16@gmail.com?Subject=Inquiry" target="_top">Send Email</a> | Copyright 2023 | Site by Emma Lightfoot 
+</footer>
+<!--end of footer-->
+	
+</body>
+	
+<!--the following script controls the responsive navigation-->
+<script>
+	(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+	</script>
+	<script>
+	var headertext = [];
+var headers = document.querySelectorAll("#miyazaki th"),
+tablerows = document.querySelectorAll("#miyazaki th"),
+tablebody = document.querySelector("#miyazaki tbody");
+for(var i = 0; i < headers.length; i++) {
+	var current = headers[i];
+	headertext.push( current.textContent.replace( /\r?\n|\r/,"") );
+}
+for (var i = 0, row; row = tablebody.rows[i]; i++) {
+	for (var j = 0, col; col = row.cells[j]; j++) {
+		col.setAttribute("data-th", headertext[j]);
+	}
+}
+</script>
+	
+	<!----Prevents audio tracks from playing simultaneously---->
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+    </script>
+
+</html>
