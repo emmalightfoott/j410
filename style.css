@@ -328,7 +328,7 @@ filter: alpha(opacity=70)
 
 /* captions below slideshow*/
 #alt-caption {
-    background-color: white;
+    background-color: #FAF6E6;
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-size: .9em;
