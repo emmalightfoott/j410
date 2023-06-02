@@ -106,7 +106,7 @@ a.text:hover, a.text:active {
     color: black;
 }
 .row a{
-	color: #1e1f32;
+	color: #8C52FF;
     font-family: "Open Sans",sans-serif;
     text-transform: uppercase;
     padding: .5rem 1rem;
@@ -121,7 +121,7 @@ a.text:hover, a.text:active {
     font-size: 16px;
     font-weight: 600;
     line-height: initial;
-    background: url(img/arrow.png) #a2ffe8;
+    background: url(img/arrow.png) #217393;
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: 96%;
@@ -364,7 +364,7 @@ footer a {
 }
 /*(link color when moused over)*/
 footer a:hover {
-	color: #cc00b3;
+	color: #217393;
 }
 
 /*----------------AUDIO BOARD-----------------*/
