@@ -106,7 +106,7 @@ a.text:hover, a.text:active {
     color: black;
 }
 .row a{
-	color: #8C52FF;
+	color: #1e1f32;
     font-family: "Open Sans",sans-serif;
     text-transform: uppercase;
     padding: .5rem 1rem;
@@ -128,7 +128,7 @@ a.text:hover, a.text:active {
 	text-decoration: none;
 }
 .row a:hover{
-	    background-color: #f0f;
+	    background-color: #8C52FF;
     color: initial;
 	    text-decoration: none;
     transition: all 0.3s ease-in 0s;
