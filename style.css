@@ -9,7 +9,7 @@
 
 body {
 	color: black; /*(default font color for the entire page)*/
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lora', serif;
 	font-weight: 300; /*(font thickness)*/
 }
 
@@ -107,7 +107,7 @@ a.text:hover, a.text:active {
 }
 .row a{
 	color: #1e1f32;
-    font-family: "Open Sans",sans-serif;
+    font-family: "Lora",serif;
     text-transform: uppercase;
     padding: .5rem 1rem;
     padding-right: 2rem;
@@ -175,7 +175,7 @@ a.text:hover, a.text:active {
 	padding-left: 80px;
 	float: left;
 	color: #000000;
-	font-family: sans-serif;
+	font-family: Sans-serif;
 	font-size: small;
   }
 	
@@ -272,7 +272,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Raleway',sans-serif;
+	font-family: 'Lora',serif;
     text-align: center;
     font-size: 55px;
     text-transform: uppercase;
@@ -330,7 +330,7 @@ filter: alpha(opacity=70)
 #alt-caption {
     background-color: #FAF6E6;
     color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lora', serif;
     font-size: .9em;
     margin-left: auto;
     margin-right: auto;
@@ -360,7 +360,7 @@ footer {
 footer a {
 	text-decoration: none; /*(nullifies underline)*/
 	color: #000000;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Lora', serif;
 }
 /*(link color when moused over)*/
 footer a:hover {
@@ -418,7 +418,7 @@ footer a:hover {
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 10px; /* Increase font size */
 }
 
